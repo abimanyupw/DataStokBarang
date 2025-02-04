@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daftar Stok Barang</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Daftar Stok Barang</h1>
+
+      <!-- Form untuk Menambah Barang -->
+      <section id="formTambahBarang">
+        <h2>Tambah Barang</h2>
+        <form id="formBarang">
+          <input
+            type="text"
+            id="namaBarang"
+            placeholder="Nama Barang"
+            required
+          />
+          <input
+            type="number"
+            id="jumlahBarang"
+            placeholder="Jumlah Barang"
+            required
+          />
+          <button type="submit">Tambah Barang</button>
+        </form>
+      </section>
+
+      <!-- Form untuk Rekap Transaksi (Masuk/Keluar) -->
+      <section id="formRekapTransaksi">
+        <h2>Rekap Barang Masuk & Keluar</h2>
+        <form id="formRekap">
+          <select id="barangPilih" required>
+            <option value="">Pilih Barang</option>
+            <!-- Barang yang ada akan dimuat disini -->
+          </select>
+          <select id="barangMasukKeluar" required>
+            <option value="masuk">Barang Masuk</option>
+            <option value="keluar">Barang Keluar</option>
+          </select>
+          <input type="number" id="jumlahRekap" placeholder="Jumlah" required />
+          <button type="submit">Rekap Transaksi</button>
+        </form>
+      </section>
+
+      <!-- Daftar Stok Barang -->
+      <section id="daftarStok">
+        <h2>Daftar Stok Barang</h2>
+        <table id="stokBarangTable">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nama Barang</th>
+              <th>Jumlah</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="stokBarangTableBody">
+            <!-- Daftar Stok Barang akan dimuat di sini -->
+          </tbody>
+        </table>
+        <h3>Total Barang: <span id="totalBarang">0</span></h3>
+      </section>
+
+      <!-- Riwayat Transaksi -->
+      <section id="riwayatTransaksi">
+        <h2>Riwayat Transaksi</h2>
+        <table id="transaksiTabel">
+          <thead>
+            <tr>
+              <th>No.</th>
+              <th>Tanggal</th>
+              <th>Nama Barang</th>
+              <th>Stok Awal</th>
+              <th>Barang Masuk</th>
+              <th>Barang Keluar</th>
+              <th>Stok Akhir</th>
+            </tr>
+          </thead>
+          <tbody id="tabelRiwayatTransaksi">
+            <!-- Riwayat Transaksi akan muncul di sini -->
+          </tbody>
+        </table>
+      </section>
+      <div class="credits">
+        <p>Created by <a href=>Abimanyu Pradipa Wisnu</a>.| &copy; 2025.</p>
+      </div>
+      </div>
+    </div>
+     
+    <script src="app.js"></script>
+  </body>
+</html>
