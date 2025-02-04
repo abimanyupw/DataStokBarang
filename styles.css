@@ -109,7 +109,162 @@ section {
   margin-top: 3rem;
   width: 95%;
 }
+
 .credits a {
   color: white;
   font-weight: 700;
+}
+
+/* Media query untuk layar dengan lebar 768px dan kurang */
+@media (max-width: 768px) {
+  body {
+    padding-top: 10px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .container {
+    width: 90%;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+
+  input,
+  select,
+  button {
+    width: 100%; /* Lebar input, select, dan button menjadi 100% */
+    margin: 8px 0;
+  }
+
+  table,
+  th,
+  td {
+    font-size: 0.9rem; /* Mengurangi ukuran font pada tabel untuk lebih pas di layar kecil */
+  }
+
+  #daftarStok ul li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .credits {
+    padding: 20px;
+    font-size: 0.75rem; /* Ukuran font lebih kecil untuk credits */
+  }
+}
+
+/* Media query untuk layar dengan lebar 450px dan kurang */
+@media (max-width: 450px) {
+  body {
+    padding-top: 5px;
+    align-items: center;
+  }
+
+  .container {
+    width: 95%;
+    padding: 5px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+    padding: 5px;
+  }
+
+  h2,
+  h3 {
+    font-size: 1rem;
+  }
+
+  input,
+  select,
+  button {
+    width: 100%;
+    padding: 8px;
+  }
+
+  table,
+  th,
+  td {
+    font-size: 0.8rem; /* Ukuran font lebih kecil */
+  }
+
+  .credits {
+    padding: 10px;
+    font-size: 0.65rem; /* Ukuran font lebih kecil untuk credits */
+  }
+}
+
+/* Media query untuk layar dengan lebar 400px dan kurang */
+@media (max-width: 400px) {
+  body {
+    padding-top: 5px;
+    align-items: center;
+    font-size: 0.9rem; /* Mengurangi ukuran font untuk layar lebih kecil */
+  }
+
+  .container {
+    width: 95%;
+    padding: 5px;
+    box-shadow: none; /* Menghilangkan box-shadow untuk menghemat ruang */
+  }
+
+  h1 {
+    font-size: 1rem; /* Ukuran font h1 disesuaikan untuk layar lebih kecil */
+    padding: 5px;
+  }
+
+  h2,
+  h3 {
+    font-size: 0.9rem; /* Ukuran font h2 dan h3 disesuaikan */
+  }
+
+  form {
+    width: 100%; /* Form menyesuaikan lebar 100% */
+  }
+
+  input,
+  select,
+  button {
+    width: 100%;
+    padding: 8px;
+    font-size: 0.9rem; /* Menyesuaikan ukuran input dan button */
+  }
+
+  button {
+    width: 100%; /* Button menjadi lebar penuh */
+    font-size: 0.9rem; /* Ukuran font pada button */
+  }
+
+  /* Tabel pada layar kecil */
+  table {
+    width: 100%;
+    font-size: 0.8rem; /* Ukuran font tabel lebih kecil */
+    overflow-x: auto; /* Izinkan scroll horizontal jika tabel terlalu lebar */
+    display: block; /* Tabel menjadi blok agar scroll bekerja */
+    white-space: nowrap; /* Mencegah teks membungkus dalam tabel */
+  }
+
+  th,
+  td {
+    padding: 8px; /* Mengurangi padding agar lebih pas */
+    min-width: 80px; /* Menentukan lebar minimal untuk kolom */
+    overflow: hidden; /* Menyembunyikan konten yang overflow */
+    text-overflow: ellipsis; /* Menambahkan ellipsis jika konten terlalu panjang */
+  }
+
+  #daftarStok ul li {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px;
+    font-size: 0.85rem; /* Ukuran font lebih kecil */
+  }
+
+  .credits {
+    padding: 10px;
+    font-size: 0.6rem; /* Ukuran font lebih kecil untuk footer */
+  }
 }

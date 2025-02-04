@@ -60,14 +60,19 @@ function loadStokBarang() {
 
     const row = document.createElement("tr");
     row.innerHTML = `
-      <td>${index + 1}</td>
-      <td>${barang.nama}</td>
-      <td>${barang.jumlah}</td>
-      <td>
-        <button onclick="editBarang(${barang.id})">Edit</button>
-        <button onclick="hapusBarang(${barang.id})">Hapus</button>
-      </td>
-    `;
+    <td>${index + 1}</td>
+    <td>${barang.nama}</td>
+    <td>${barang.jumlah}</td>
+    <td>
+      <button onclick="editBarang(${
+        barang.id
+      })"><i class="fas fa-edit fa-xs"></i></button>
+      <button onclick="hapusBarang(${
+        barang.id
+      })"><i class="fas fa-trash fa-xs"></i></button>
+    </td>
+  `;
+
     stokBarangList.appendChild(row);
   });
 
